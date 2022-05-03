@@ -1,0 +1,171 @@
+html 
+{
+	min-height: 100%; 
+  -webkit-text-size-adjust: 100%;
+}
+
+/* roboto-regular - latin-ext_latin  !AM SCHIMBAT FONTUL*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v29-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/roboto-v29-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v29-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v29-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v29-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v29-latin-ext_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+.fundal {
+    position: relative;
+    min-height: 100%;
+    background-size: cover;
+    background-image: url("imagini/greciabun.jpeg");
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    font-family: "Roboto", sans-serif;
+    margin: auto;
+}
+
+#grad
+{
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(7, 153, 146, 0.9) 100%);
+  background-size: cover;
+  top: 100px;
+  left: 0px;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  z-index: -1;
+}
+
+.nav
+{
+  z-index:0;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3c6382;
+  text-align:center;
+  box-shadow:0px 0px 50px 0px rgba(0,0,0, 1);
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; 
+}
+
+.nav li a:hover, .dropdown:hover .dropbtn {
+  background-color: #0a3d62;
+}
+
+
+.dropdown li {
+  display: inline-block;
+}
+
+.dropdown-content  {
+  display: none;
+  position: absolute;
+  background-color: #3c6382;
+  min-width: 160px;
+  box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover 
+{
+	background-color: #0a3d62;
+}
+	
+.dropdown:hover .dropdown-content 
+{
+  display: block;
+}
+
+footer 
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(0, 29, 33, 0.9);
+  color: white;
+  text-align: center;
+}
+
+footer p
+{
+	font-size: 15px;
+}
+
+footer a
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover
+{
+  text-decoration: underline;
+  color: #b8e994;
+}
+
+footer a:visited
+{
+  text-decoration: inherit;
+  color: #fad390;
+}
+
+footer a:active
+{
+  text-decoration: underline;
+  color: #78e08f;
+}
+
+/*.parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 1;
+  }
+
+ .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(1);
+    transform: translateZ(-300px) scale(1);
+    z-index: 0;
+ }
+ */
