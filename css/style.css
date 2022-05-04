@@ -19,19 +19,23 @@ html
 }
 
 .fundal {
-    position: relative;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
     min-height: 100%;
     background-size: cover;
-    background-image: url("imagini/greciabun.jpeg");
+    background-image: url("../imagini/greciabun.jpeg");
     background-repeat: no-repeat;
     background-blend-mode: hard-light;
     font-family: "Roboto", sans-serif;
-    margin: auto;
+    margin: 0;
 }
 
 #grad
 {
-  background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(7, 153, 146, 0.9) 100%);
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(7, 153, 146, 0.908) 100%);
   background-size: cover;
   top: 100px;
   left: 0px;
@@ -44,9 +48,11 @@ html
   z-index: -1;
 }
 
+
 .nav
 {
-  z-index:0;
+  
+  min-width: 100%;
 }
 
 .nav ul {
@@ -83,6 +89,10 @@ html
   background-color: #0a3d62;
 }
 
+.dropdown
+{
+  z-index: 1;
+}
 
 .dropdown li {
   display: inline-block;
@@ -94,7 +104,7 @@ html
   background-color: #3c6382;
   min-width: 160px;
   box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.5);
-  z-index: 0;
+  z-index: 5;
 }
 
 .dropdown-content a {
@@ -115,10 +125,29 @@ html
   display: block;
 }
 
+/* STYLE PENTRU CONTINUT*/
+
+.contbox
+{
+  position: relative;
+  min-width: 500px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 185px;
+  background-color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-shadow: 0px -1px 16px 5px rgba(0, 0, 0, 0.467);
+  color: rgb(30, 30, 30);
+  z-index: 0;
+}
+
 footer 
 {
-  position: absolute;
-  bottom: 0;
+  
+  bottom: 0px;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -126,6 +155,7 @@ footer
   background-color: rgba(0, 29, 33, 0.9);
   color: white;
   text-align: center;
+  z-index: 5;
 }
 
 footer p
