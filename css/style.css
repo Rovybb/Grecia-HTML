@@ -28,7 +28,6 @@ html
     background-size: cover;
     background-image: url("../imagini/greciabun.jpeg");
     background-repeat: no-repeat;
-    background-blend-mode: hard-light;
     font-family: "Roboto", sans-serif;
     margin: 0;
 }
@@ -127,22 +126,23 @@ html
 
 .side_bar_menu
 {
-  height: auto;
+  position: sticky;
+  margin-left: 25px;
+  margin-top: 185px;
+  padding: 0px;
+  top: 0;
+  z-index: 5;
+  float: left;
 }
 
 .side_bar_menu ul 
 {
-  position: sticky;
-  margin-left: 25px;
-  margin-bottom: auto;
-  top: 0;
+  margin: 0px;
   padding: 0px;
-  float: left;
   list-style-type: none;
   background-color: white;
   min-width: 160px;
   box-shadow: -8px 0px 8px 0px rgb(0 0 0 / 20%);
-  z-index: 5;
 }
 
 .side_bar_menu li a {
