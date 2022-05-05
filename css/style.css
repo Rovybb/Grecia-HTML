@@ -21,7 +21,7 @@ html
 .fundal {
     position: absolute;
     top: 0px;
-    bottom: 0px;
+    bottom: auto;
     right: 0px;
     left: 0px;
     min-height: 100%;
@@ -50,7 +50,6 @@ html
 
 .nav
 {
-  
   min-width: 100%;
 }
 
@@ -170,6 +169,7 @@ html
 {
   position: relative;
   min-width: 500px;
+  min-height: 320px;
   margin-left: 250px;
   margin-right: 250px;
   margin-top: 185px;
@@ -183,10 +183,20 @@ html
   z-index: 0;
 }
 
+.contbox p
+{
+  text-align: justify;
+}
+
+.contbox p span
+{
+  display: inline-block;
+  margin-left: 40px;
+}
+
 footer 
 {
-  
-  bottom: 0px;
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -225,16 +235,3 @@ footer a:active
   text-decoration: underline;
   color: #78e08f;
 }
-
-/*.parallax__layer--base {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    z-index: 1;
-  }
-
- .parallax__layer--back {
-    -webkit-transform: translateZ(-300px) scale(1);
-    transform: translateZ(-300px) scale(1);
-    z-index: 0;
- }
- */
