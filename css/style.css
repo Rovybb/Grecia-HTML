@@ -91,7 +91,7 @@ html
 
 .dropdown
 {
-  z-index: 1;
+  z-index: 5;
 }
 
 .dropdown li {
@@ -103,7 +103,7 @@ html
   position: absolute;
   background-color: #3c6382;
   min-width: 160px;
-  box-shadow: 10px 8px 16px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
   z-index: 5;
 }
 
@@ -123,6 +123,45 @@ html
 .dropdown:hover .dropdown-content 
 {
   display: block;
+}
+
+.side_bar_menu
+{
+  height: auto;
+}
+
+.side_bar_menu ul 
+{
+  position: sticky;
+  margin-left: 25px;
+  margin-bottom: auto;
+  top: 0;
+  padding: 0px;
+  float: left;
+  list-style-type: none;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: -8px 0px 8px 0px rgb(0 0 0 / 20%);
+  z-index: 5;
+}
+
+.side_bar_menu li a {
+  color: black;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.side_bar_menu li a.active
+{
+  background-color: #0a3d62;
+  color: white;
+}
+
+.side_bar_menu li a:hover:not(.active) 
+{
+	background-color: #d2cdcd;
 }
 
 /* STYLE PENTRU CONTINUT*/
