@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Slideshow Images</title>
+  <style>
+    .slider {
+      position: absolute;
+      left: 33.33%;
+      width: 500px;
+      height: 300px;
+      background-color: rgb(255, 255, 255);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #image-container {
+      width: 2000px;
+      background-color: pink;
+      height: 300px;
+      clear: both;
+      position: relative;
+      -webkit-transition: left 2s;
+      -moz-transition: left 2s;
+      -o-transition: left 2s;
+      transition: left 2s;
+
+      box-shadow: 0px, 0px, 8px, 5px, rgba(0, 0, 0, 0.5);
+    }
+
+    .slide {
+      float: left;
+      margin: 0px;
+      padding: 0px;
+      position: relative;
+    }
+
+    #slide-1:target~.image-container {
+      left: 0px;
+    }
+
+    #slide-2:target~.image-container {
+      left: -500px;
+    }
+
+    #slide-3:target~.image-container {
+      left: -1000px;
+    }
+
+    #slide-4:target~.image-container {
+      left: -1500px;
+    }
+
+    .buttons {
+      position: relative;
+      top: -20px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      border-radius: 50px;
+      background-color: rgba(245, 245, 245, 0.726);
+    }
+
+    .prev {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      left: 0;
+      width: auto;
+      padding: 16px;
+      margin-top: 0px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: 0px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slider">
+    <div id="image-container">
+      <img src="../testate/img_5terre.jpg" class="slide" width="500" height="300" />
+      <img src="../testate/img_lights.jpg" class="slide" width="500" height="300" />
+      <img src="../testate/img_nature.jpg" class="slide" width="500" height="300" />
+      <img src="../testate/img_woods.jpg" class="slide" width="500" height="300" />
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="buttons">
+      <a class="button" onclick="currentSlide(1)"></a>
+      <a class="button" onclick="currentSlide(2)"></a>
+      <a class="button" onclick="currentSlide(3)"></a>
+      <a class="button" onclick="currentSlide(4)"></a>
+    </div>
+  </div>
+</body>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let buttons = document.getElementsByClassName("button")
+    let container = document.getElementById("image-container")
+    for(i=0; i<buttons.length; i++)
+    {
+      buttons[i].style.backgroundColor = "rgba(245, 245, 245, 0.726)";
+    }
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    container.style.left = (500 + (-500) * slideIndex) + "px";
+    buttons[slideIndex-1].style.backgroundColor = "rgba(245, 245, 245, 1.0)"; 
+  }
+</script>
+
+</html>
