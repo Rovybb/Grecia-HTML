@@ -217,11 +217,14 @@ body{
 }
 
 .buttons {
+  cursor: default;
+  user-select: none;
   position: relative;
   top: -20px;
 }
 
 .buttons a {
+  cursor: pointer;
   display: inline-block;
   height: 12px;
   width: 12px;
