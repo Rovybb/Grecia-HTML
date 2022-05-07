@@ -5,8 +5,8 @@
   <title>Slideshow Images</title>
   <style>
     .slider {
-      position: absolute;
-      left: 33.33%;
+      position: relative;
+      margin-left: auto;
       width: 500px;
       height: 300px;
       background-color: rgb(255, 255, 255);
@@ -15,6 +15,7 @@
       margin-top: 0px;
       text-align: center;
       overflow: hidden;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 
     #image-container {
@@ -131,24 +132,40 @@
 </body>
 <script>
   let slideIndex = 0;
+  let slideDelay = 5000;
+  let slides = document.getElementsByClassName("slide");
+  let buttons = document.getElementsByClassName("button")
+  let container = document.getElementById("image-container")
   showSlides();
 
   function plusSlides(n) {
-    slideIndex += n;
     clearTimeout(time);
-    showSlides();
-
-    //copie codul de la showSlides si modifica un pis
-
+    let i;
+    slideIndex += n;
+    for(i=0; i<buttons.length; i++)
+    {
+      buttons[i].style.backgroundColor = "rgba(245, 245, 245, 0.726)";
+    }
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex < 1) { slideIndex = slides.length }
+    container.style.left = (500 + (-500) * slideIndex) + "px";
+    buttons[slideIndex-1].style.backgroundColor = "rgba(245, 245, 245, 1.0)";
+    time = setTimeout(showSlides, slideDelay);
   }
 
   function currentSlide(n) {
-    slideIndex = n;
     clearTimeout(time);
-    showSlides();
-
-    //la fel si aici
-
+    let i;
+    slideIndex = n;
+    for(i=0; i<buttons.length; i++)
+    {
+      buttons[i].style.backgroundColor = "rgba(245, 245, 245, 0.726)";
+    }
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex < 1) { slideIndex = slides.length }
+    container.style.left = (500 + (-500) * slideIndex) + "px";
+    buttons[slideIndex-1].style.backgroundColor = "rgba(245, 245, 245, 1.0)";
+    time = setTimeout(showSlides, slideDelay);
   }
 
   function showSlides() {
@@ -165,7 +182,7 @@
     if (slideIndex < 1) { slideIndex = slides.length }
     container.style.left = (500 + (-500) * slideIndex) + "px";
     buttons[slideIndex-1].style.backgroundColor = "rgba(245, 245, 245, 1.0)";
-    time = setTimeout(showSlides, 3000);
+    time = setTimeout(showSlides, slideDelay);
   }
 </script>
 

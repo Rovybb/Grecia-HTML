@@ -6,45 +6,68 @@
 		<link rel="icon" href="../imagini/iconita.png">
 		<link rel="stylesheet" href="../css/style.css">
     </head>
-			<body class="fundal">
+			<body>
 				<div id="grad"></div>
 				<div class="nav">
-						<ul>
-							<li>
-								<a class="active" href="../html/main.html" title="Acas&#259">Acas&#259</a>
-									<!-- asta face ca atunic cand tii mouseul sa apasa text -->
-							</li>
-							<li class="dropdown">
-								<a href="javascript:void(0)" class="dropbtn">Despre Grecia</a>
-								<div class="dropdown-content">
-									<a href="../html/despre_grecia.html" title="Localizare">Localizare</a>
-									<a href="#" title="Relieful">Relieful</a>
-									<a href="#" title="Cadrul Natural">Cadrul Natural</a>
-									<a href="#" title="Demografia">Demografia</a>
-									<a href="#" title="Cultura &#351i Civilizatia Greac&#259">Cultura &#351i Civilizatia Greac&#259</a>
-									<a href="#" title="Rela&#355ii Interna&#355ionale">Rela&#355ii Interna&#355ionale</a>
-								</div>
-							</li>
-							<li>
-								<a href="../html/regiuni.html">Regiuni</a>
-							</li>
-							<li class="dropdown">
-								<a href="javascript:void(0)" class="dropbtn">Economia</a>
-								<div class="dropdown-content">
-									<a href="../html/economia.html">Industria</a>
-									<a href="#">Agricultura</a>
-									<a href="#">Statistici</a>
-								</div>
-							</li>
-							<li>
-								<a href="../html/turism.html">Turism</a>
-							</li>
-						</ul>
+					<ul>
+						<li>
+							<a class="active" href="../html/main.html" title="Acas&#259">Acas&#259</a>
+								<!-- asta face ca atunic cand tii mouseul sa apasa text -->
+						</li>
+						<li class="dropdown">
+							<a href="javascript:void(0)" class="dropbtn">Despre Grecia</a>
+							<div class="dropdown-content">
+								<a href="../html/localizare.html" title="Localizare">Localizare</a>
+								<a href="../html/relieful.html" title="Relieful">Relieful</a>
+								<a href="../html/cadr_nat.html" title="Cadrul Natural">Cadrul Natural</a>
+								<a href="../html/demografia.html" title=" Demografia">Demografia</a>
+								<a href="../html/cultura.html" title="Cultura &#351i Civilizatia Greac&#259">Cultura &#351i Civilizatia Greac&#259</a>
+								<a href="../html/relatii_int.html" title="Rela&#355ii Interna&#355ionale">Rela&#355ii Interna&#355ionale</a>
+							</div>
+						</li>
+						<li>
+							<a href="../html/regiuni.html" title="Regiuni">Regiuni</a>
+						</li>
+						<li class="dropdown">
+							<a href="javascript:void(0)" class="dropbtn">Economia</a>
+							<div class="dropdown-content">
+								<a href="../html/industria.html" title="Industria">Industria</a>
+								<a href="../html/agricult.html" title="Agricultura">Agricultura</a>
+								<a href="../html/statistici.html" title="Statistici">Statistici</a>
+							</div>
+						</li>
+						<li>
+							<a href="../html/turism.html" title="Turism">Turism</a>
+						</li>
+					</ul>
 				</div>
-				<div style=padding:700px;></div>
+
+				<h2>GRECIA</h2>
+
+				<div class="slider">
+					<div id="image-container">
+					  <img src="../testate/img_5terre.jpg" class="slide" width="750" height="450" />
+					  <img src="../testate/img_lights.jpg" class="slide" width="750" height="450" />
+					  <img src="../testate/img_nature.jpg" class="slide" width="750" height="450" />
+					  <img src="../testate/img_woods.jpg" class="slide" width="750" height="450" />
+					</div>
+				
+					<a class="prev" onclick="plusSlides(-1)">❮</a>
+					<a class="next" onclick="plusSlides(1)">❯</a>
+				
+					<div class="buttons">
+					  <a class="button" onclick="currentSlide(1)"></a>
+					  <a class="button" onclick="currentSlide(2)"></a>
+					  <a class="button" onclick="currentSlide(3)"></a>
+					  <a class="button" onclick="currentSlide(4)"></a>
+					</div>
+				  </div>
+
+				  <div class="contbox"></div>
+
 				<footer>
 						<p>&reg G&#259in&#259 Alexandru & Babalean Robert </p>
-						<p><a href="../html/bibliografie.html">Bibliografie</a></p>
+						<p><a href="../html/bibliografie.html" title="Bibliografie">Bibliografie</a></p>
 				</footer>
 			</body>
 			<script>
@@ -65,6 +88,61 @@
   };
 
 })();
+			</script>
+			<script>
+				let slideIndex = 0;
+  let slideDelay = 5000;
+  let slides = document.getElementsByClassName("slide");
+  let buttons = document.getElementsByClassName("button")
+  let container = document.getElementById("image-container")
+  showSlides();
+
+  function plusSlides(n) {
+    clearTimeout(time);
+    let i;
+    slideIndex += n;
+    for(i=0; i<buttons.length; i++)
+    {
+      buttons[i].style.backgroundColor = "rgba(245, 245, 245, 0.726)";
+    }
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex < 1) { slideIndex = slides.length }
+    container.style.left = (750 + (-750) * slideIndex) + "px";
+    buttons[slideIndex-1].style.backgroundColor = "rgba(245, 245, 245, 1.0)";
+    time = setTimeout(showSlides, slideDelay);
+  }
+
+  function currentSlide(n) {
+    clearTimeout(time);
+    let i;
+    slideIndex = n;
+    for(i=0; i<buttons.length; i++)
+    {
+      buttons[i].style.backgroundColor = "rgba(245, 245, 245, 0.726)";
+    }
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex < 1) { slideIndex = slides.length }
+    container.style.left = (750 + (-750) * slideIndex) + "px";
+    buttons[slideIndex-1].style.backgroundColor = "rgba(245, 245, 245, 1.0)";
+    time = setTimeout(showSlides, slideDelay);
+  }
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let buttons = document.getElementsByClassName("button")
+    let container = document.getElementById("image-container")
+    slideIndex++;
+    for(i=0; i<buttons.length; i++)
+    {
+      buttons[i].style.backgroundColor = "rgba(245, 245, 245, 0.726)";
+    }
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex < 1) { slideIndex = slides.length }
+    container.style.left = (750 + (-750) * slideIndex) + "px";
+    buttons[slideIndex-1].style.backgroundColor = "rgba(245, 245, 245, 1.0)";
+    time = setTimeout(showSlides, slideDelay);
+  }
 			</script>
 </html>
 		
