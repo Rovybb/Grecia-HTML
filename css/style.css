@@ -283,6 +283,30 @@ body{
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*----foto gallery----*/
+
+.gallery {
+  display: grid;
+  cursor: default;
+  user-select: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 10vw);
+  grid-gap: 1.5rem;
+}
+
+.gallery__item {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /*----side page menu----*/
 
 .side_bar_menu
@@ -377,6 +401,12 @@ footer
 footer p
 {
 	font-size: 15px;
+}
+
+footer p span
+{
+  display: inline-block;
+  margin-left: 15px;
 }
 
 footer a

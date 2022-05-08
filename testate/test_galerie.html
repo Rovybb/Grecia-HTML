@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+body {
+  color: #333;
+  font-weight: 300;
+  line-height: 1.6; 
+}
+
+.container {
+  width: 60%;
+  margin: 2rem auto; 
+}
+
+.gallery {
+  display: grid;
+  user-select: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(8, 10vw);
+  grid-gap: 1.5rem;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <a target="_blank" href="img_5terre.jpg">
+                        <img src="../testate/img_5terre.jpg" class="gallery__img" alt="Gallery Image 1">
+                    </a>
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <a target="_blank" href="img_lights.jpg">
+                        <img src="../testate/img_lights.jpg" class="gallery__img">
+                    </a>
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <a target="_blank" href="img_mountains.jpg">
+                        <img src="../testate/img_mountains.jpg" class="gallery__img">
+                    <a target="_blank" href="img_5terre.jpg"></a>
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <a target="_blank" href="img_nature.jpg">
+                        <img src="../testate/img_nature.jpg" class="gallery__img">
+                    </a>
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                    <a target="_blank" href="img_snow.jpg">
+                        <img src="../testate/img_snow.jpg" class="gallery__img">
+                    </a>
+                </figure>
+                <figure class="gallery__item gallery__item--6">
+                    <a target="_blank" href="img_woods.jpg">
+                        <img src="../testate/img_woods.jpg" class="gallery__img">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </body>
+</html>
