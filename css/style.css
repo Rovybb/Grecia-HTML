@@ -29,6 +29,8 @@ html {
 /*----title style----*/
 
 h2{
+  cursor: default;
+  user-select: none;
   position: relative;
   margin-top: 175px;
   margin-bottom: 225px;
@@ -40,6 +42,8 @@ h2{
 }
 
 h3{
+  cursor: default;
+  user-select: none;
   position: relative;
   left: -125.25px;
   margin-top: 50px;
@@ -106,6 +110,8 @@ body{
 }
 
 .nav li a {
+  cursor: pointer;
+  user-select: none;
   display: block;
   color: white;
   text-align: left;
@@ -127,6 +133,10 @@ body{
   background-color: #0a3d62;
 }
 
+.dropbtn{
+  cursor: default !important;
+}
+
 .dropdown
 {
   z-index: 5;
@@ -146,6 +156,8 @@ body{
 }
 
 .dropdown-content a {
+  cursor: pointer;
+  user-select: none;
   color: black;
   padding: 15px 16px;
   text-decoration: none;
