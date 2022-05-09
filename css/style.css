@@ -245,6 +245,7 @@ body{
   border-radius: 0 3px 3px 0;
   user-select: none;
   -webkit-user-select: none;
+  transition: 0.3s ease;
 }
 
 /* Position the "next button" to the right */
@@ -262,6 +263,7 @@ body{
   font-size: 20px;
   user-select: none;
   -webkit-user-select: none;
+  transition: 0.3s ease;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -292,6 +294,14 @@ body{
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+img.hover-shadow{
+  transition: 0.3s;
+}
+
+.hover-shadow:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /*----side page menu----*/
