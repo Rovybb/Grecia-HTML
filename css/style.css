@@ -192,7 +192,7 @@ body{
 }
 
 #image-container {
-  width: 3000px;
+  width: 4500px;
   background-color: whitesmoke;
   height: 450px;
   clear: both;
@@ -210,22 +210,6 @@ body{
   margin: 0px;
   padding: 0px;
   position: relative;
-}
-
-#slide-1:target~.image-container {
-  left: 0px;
-}
-
-#slide-2:target~.image-container {
-  left: -750px;
-}
-
-#slide-3:target~.image-container {
-  left: -1500px;
-}
-
-#slide-4:target~.image-container {
-  left: -2250px;
 }
 
 .buttons {
@@ -290,7 +274,7 @@ body{
   cursor: default;
   user-select: none;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 10vw);
+  grid-template-rows: repeat(4, 10vw);
   grid-gap: 1.5rem;
 }
 
@@ -355,7 +339,7 @@ body{
 {
   position: relative;
   min-width: 500px;
-  min-height: 303px;
+  min-height: 292.7px;
   margin-left: 250px;
   margin-right: 250px;
   margin-top: 50px;
