@@ -26,6 +26,9 @@ html {
         url('../fonts/SATYP___.TTF') format('truetype');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+
 /*----title style----*/
 
 h2{
@@ -274,7 +277,7 @@ body{
   cursor: default;
   user-select: none;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 10vw);
+  grid-template-rows: repeat(5, 10vw);
   grid-gap: 1.5rem;
 }
 
@@ -354,12 +357,28 @@ body{
   z-index: 0;
 }
 
-.contbox p
-{
+.contbox p {
+
   text-align: justify;
+  font-size: 20px;
+}
+
+.contbox img{
+  margin: 10px 10px;
+}
+
+.contbox p.quote{
+  font-family: "Alegreya", serif;
+  font-style: normal;
 }
 
 .contbox p span
+{
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.contbox p.quote span
 {
   display: inline-block;
   margin-left: 40px;
