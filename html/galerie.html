@@ -11,7 +11,7 @@
 				<div class="nav">
 					<ul>
 						<li>
-							<a href="../html/main.html" title="Acas&#259">Acas&#259</a>
+							<a href="../main.html" title="Acas&#259">Acas&#259</a>
 						</li
 						><li class="dropdown">
 							<a href="javascript:void(0)" class="dropbtn">Despre Grecia</a>
@@ -153,10 +153,12 @@
 			<script>
 				function openModal() {
             document.getElementById("myModal").style.display = "block";
+			document.body.style.overflow = "hidden";
           }
           
           function closeModal() {
             document.getElementById("myModal").style.display = "none";
+			document.body.style.overflow = "overlay"
           }
           
           var slideIndex = 1;
