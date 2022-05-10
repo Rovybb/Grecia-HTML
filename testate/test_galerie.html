@@ -4,36 +4,42 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            *,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; 
-}
 
 html {
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   font-size: 62.5%; 
 }
+
 
 body {
   color: #333;
   font-weight: 300;
   line-height: 1.6; 
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   width: 60%;
   margin: 2rem auto; 
+  padding: 0;
 }
 
 .gallery {
   display: grid;
   user-select: none;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(8, 10vw);
+  grid-template-rows: repeat(3, 10vw);
   grid-gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__item
+{
+  margin: 0;
+  padding: 0;
 }
 
 .gallery__img {
@@ -41,12 +47,13 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  cursor: pointer;
 }
 
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 6;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -58,11 +65,12 @@ body {
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: rgba(0 ,0 ,0, 0);
   margin: auto;
   padding: 0;
-  width: 90%;
+  width: auto;
   max-width: 1200px;
+  max-height: 500px;
 }
 
 /* The Close Button */
@@ -86,16 +94,12 @@ body {
   display: none;
 }
 
-.cursor {
-  cursor: pointer;
-}
-
 /* Next & previous buttons */
-.prev,
-.next {
+.prevg,
+.nextg {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 250px;
   width: auto;
   padding: 16px;
   margin-top: -50px;
@@ -109,15 +113,16 @@ body {
 }
 
 /* Position the "next button" to the right */
-.next {
+.nextg {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.prevg:hover,
+.nextg:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
 }
 
 /* Number text (1/3 etc) */
@@ -129,8 +134,10 @@ body {
   top: 0;
 }
 
-img {
+.mySlides img{
   margin-bottom: -5px;
+  max-height: 500px;
+  object-fit: scale-down;
 }
 
 img.hover-shadow {
@@ -146,22 +153,31 @@ img.hover-shadow {
         <div class="container">
             <div class="gallery">
                 <figure class="gallery__item">
-                        <img src="../testate/img_nature.jpg" onclick="openModal();currentSlide(1)" class="gallery__img cursor hover-shadow">
+                        <img src="../imagini/case.jpg" onclick="openModal();currentSlide(1)" class="gallery__img cursor hover-shadow">
                 </figure>
                 <figure class="gallery__item">
-                        <img src="../testate/img_snow.jpg" onclick="openModal();currentSlide(2)" class="gallery__img cursor hover-shadow">
+                        <img src="../imagini/zakynthos-grecia.jpg" onclick="openModal();currentSlide(2)" class="gallery__img cursor hover-shadow">
                 </figure>
                 <figure class="gallery__item">
-                        <img src="../testate/img_mountains.jpg" onclick="openModal();currentSlide(3)" class="gallery__img cursor hover-shadow">
+                        <img src="../imagini/The_Parthenon_in_Athens.jpg" onclick="openModal();currentSlide(3)" class="gallery__img cursor hover-shadow">
                 </figure>
                 <figure class="gallery__item">
-                        <img src="../testate/img_lights.jpg" onclick="openModal();currentSlide(4)" class="gallery__img cursor hover-shadow">
+                        <img src="../imagini/poza-templul-lui-zeus-atena.jpg" onclick="openModal();currentSlide(4)" class="gallery__img cursor hover-shadow">
                 </figure>
                 <figure class="gallery__item">
-                        <img src="../testate/img_woods.jpg" onclick="openModal();currentSlide(5)" class="gallery__img cursor hover-shadow">
+                        <img src="../imagini/insula-creta-grecia.jpg" onclick="openModal();currentSlide(5)" class="gallery__img cursor hover-shadow">
                 </figure>
                 <figure class="gallery__item">
-                        <img src="../testate/img_5terre.jpg" onclick="openModal();currentSlide(6)" class="gallery__img cursor hover-shadow">
+                        <img src="../imagini/01-Gyros-de-pui-cu-tzatziki.jpg" onclick="openModal();currentSlide(6)" class="gallery__img cursor hover-shadow">
+                </figure>
+                <figure class="gallery__item">
+                  <img src="../imagini/muntele-athos.jpg" onclick="openModal();currentSlide(7)" class="gallery__img cursor hover-shadow">
+                </figure>
+                <figure class="gallery__item">
+                  <img src="../imagini/vedere-panoramica-atena.jpg" onclick="openModal();currentSlide(8)" class="gallery__img cursor hover-shadow">
+                </figure>
+                <figure class="gallery__item">
+                  <img src="../imagini/amfora.jpg" onclick="openModal();currentSlide(9)" class="gallery__img cursor hover-shadow">
                 </figure>
             </div>
         </div>
@@ -172,34 +188,46 @@ img.hover-shadow {
           
               <div class="mySlides">
                 <div class="numbertext"></div>
-                <img src="img_nature_wide.jpg" style="width:100%">
+                <img src="../imagini/case.jpg" style="width:100%">
               </div>
           
               <div class="mySlides">
                 <div class="numbertext"></div>
-                <img src="img_snow_wide.jpg" style="width:100%">
+                <img src="../imagini/zakynthos-grecia.jpg" style="width:100%">
               </div>
           
               <div class="mySlides">
                 <div class="numbertext"></div>
-                <img src="img_mountains_wide.jpg" style="width:100%">
+                <img src="../imagini/The_Parthenon_in_Athens.jpg" style="width:100%">
               </div>
               
               <div class="mySlides">
                 <div class="numbertext"></div>
-                <img src="img_lights_wide.jpg" style="width:100%">
+                <img src="../imagini/poza-templul-lui-zeus-atena.jpg" style="width:100%">
               </div>
               <div class="mySlides">
                 <div class="numbertext"></div>
-                <img src="img_woods_wide.jpg" style="width:100%">
+                <img src="../imagini/insula-creta-grecia.jpg" style="width:100%">
               </div>
               <div class="mySlides">
                 <div class="numbertext"></div>
-                <img src="img_5terre_wide.jpg" style="width:100%">
+                <img src="../imagini/01-Gyros-de-pui-cu-tzatziki.jpg" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext"></div>
+                <img src="../imagini/muntele-athos.jpg" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext"></div>
+                <img src="../imagini/vedere-panoramica-atena.jpg" style="width:100%">
+              </div>
+              <div class="mySlides">
+                <div class="numbertext"></div>
+                <img src="../imagini/amfora.jpg" style="width:100%">
               </div>
               
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+              <a class="prevg" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="nextg" onclick="plusSlides(1)">&#10095;</a>
           
             </div>
           </div>
