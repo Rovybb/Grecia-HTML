@@ -55,10 +55,36 @@
 				<h3>GRECIA</h3>
 
 				<div class="contbox">
-					<h1 style="text-align: center;"></h1>
+					<h1 style="text-align: center;">Relieful</h1>
 					<p>
-						
+						<span></span><img src="../imagini/maps/greece-physical-map.jpg" style="float: right; object-fit: scale-down; cursor: pointer;" width="40%" title="Harta fizică a Greciei" onclick="openModal();currentSlide(1)"
+						><b>Grecia</b> este formată dintr-o parte continentală muntoasă 
+						și peninsulară, întinzându-se în mare în capătul sudic al <b>Peninsulei 
+						Balcanice</b>, terminându-se cu <b>Peninsula Pelopones</b> (separată de restul 
+						continentului printr-un canal prin <b>Istmul Corintului⁠</b>). Datorită coastei 
+						deosebit de complexe și datorită numeroaselor insule, Grecia are a 
+						unsprezecea cea mai lungă coastă din lume, cu 13.676 km; frontiera sa 
+						terestră este de doar 1.160 km. Țara se află aproximativ între paralelele 
+						de 34° și 42° latitudine nordică, și între meridianele de 19° și 30° longitudine estică.<br>
+						<span></span><b>Grecia</b> are un număr mare de insule, între 1.200 și 6.000, în funcție de definiție, 
+						dintre care 227 sunt locuite. <b>Creta</b> este cea mai mare și mai populată; <b>Euboea</b>, separată de 
+						continent prin Strâmtoarea Euripus lată de 60 m, este a doua ca mărime, urmată de <b>Rhodos</b> și <b>Lesbos</b>.
 					</p>
+				</div>
+
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				  
+					  <div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../imagini/maps/greece-physical-map.jpg" style="width:100%">
+					  </div>
+					  
+					  <a class="prevg" onclick="plusSlides(-1)">&#10094;</a>
+					  <a class="nextg" onclick="plusSlides(1)">&#10095;</a>
+				  
+					</div>
 				</div>
 
 				<footer>
@@ -84,6 +110,41 @@
   };
 
 })();
+			</script>
+			<script>
+				function openModal() {
+            document.getElementById("myModal").style.display = "block";
+			document.body.style.overflow = "hidden";
+          }
+          
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+			document.body.style.overflow = "overlay"
+          }
+          
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var texts = document.getElementsByClassName("numbertext");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+            texts[slideIndex-1].textContent = slideIndex + " / " + slides.length;
+          }
 			</script>
 </html>
 		
