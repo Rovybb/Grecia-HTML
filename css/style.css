@@ -348,7 +348,7 @@ a.active:hover {
   cursor: default;
   user-select: none;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 10vw);
+  grid-template-rows: repeat(10, 10vw);
   grid-gap: 1.5rem;
   margin: 0;
   padding: 0;
