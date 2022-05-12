@@ -55,10 +55,41 @@
 				<h3>GRECIA</h3>
 
 				<div class="contbox">
-					<h1 style="text-align: center;"></h1>
+					<h1 style="text-align: center;">Clima</h1>
 					<p>
-						
+						<img src="../imagini/maps/harta_clima.png" style="float: right; object-fit: scale-down; margin-right: 0; cursor: pointer;" width="40%" title="Harta fizică a Greciei" onclick="openModal();currentSlide(1)"
+						><b>Clima Greciei</b> este în principal mediteraneană cu ierni blânde și umede 
+						și cu veri uscate și călduroase. Acest tip de climă este prezent în toate 
+						zonele de coastă, inclusiv în <b>Atena</b>, în <b>Ciclade</b>, <b>Dodocaneze</b>, <b>Creta</b> și 
+						<b>Pelopones</b>, în <b>Insulele Ionice</b> și în unele părți din <b>Grecia</b> continentală 
+						centrală. <b>Munții Pindului</b> afectează puternic clima din țară, zonele de la vest 
+						de munți fiind considerabil mai umede în medie (din cauza expunerii mai mari 
+						la vânturile de vest care aduc umezeală) decât cele aflate la est de munți (din 
+						cauza unui efect de umbră pluviometrică).<br><br><br>
+
+						Zonele montane din <b>Grecia</b> de nord-vest (părți din <b>Epir</b>, <b>Grecia Centrală</b>, <b>Tesalia</b>, 
+						<b>Macedonia de Vest</b>) ca și în zonele centrale muntoase ale <b>Peloponesului</b> - inclusiv părți 
+						din regiunile <b>Aheea</b>, <b>Arcadia</b> și <b>Laconia</b> - prezintă o climă alpină cu zăpezi abundente. 
+						Zonele interioare ale <b>Greciei</b> nordice, din <b>Macedonia centrală</b> și din <b>Macedonia de Est</b> și 
+						<b>Tracia</b> prezintă o temperate climate, cu ierni reci și umede și cu veri calde și uscate 
+						marcate de furtuni frecvente. Zăpada cade anual în munți și în nordul țării, apărând însă 
+						uneori și în zonele mai joase, cum ar fi <b>Atena</b>.
 					</p>
+				</div>
+
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				  
+					  <div class="mySlides">
+						<div class="numbertext"></div>
+						<img src="../imagini/maps/harta_clima.png" style="width: auto; margin: 0 22vw; background: white;">
+					  </div>
+
+					  <a class="prevg" onclick="plusSlides(-1)">&#10094;</a>
+					  <a class="nextg" onclick="plusSlides(1)">&#10095;</a>
+				  
+					</div>
 				</div>
 
 				<footer>
@@ -84,6 +115,41 @@
   };
 
 })();
+			</script>
+			<script>
+				function openModal() {
+            document.getElementById("myModal").style.display = "block";
+			document.body.style.overflow = "hidden";
+          }
+          
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+			document.body.style.overflow = "overlay"
+          }
+          
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var texts = document.getElementsByClassName("numbertext");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+            texts[slideIndex-1].textContent = slideIndex + " / " + slides.length;
+          }
 			</script>
 </html>
 		
