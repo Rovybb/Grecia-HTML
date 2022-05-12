@@ -45,6 +45,20 @@ html {
        url('../fonts/roboto-v29-latin-ext_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v15/vSzulfKSK0LLjjfeaxcREhTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+}
+
 /*----title font----*/
 
 @font-face {
@@ -54,6 +68,22 @@ html {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+        url('../fonts/Alegreya-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+        url('../fonts/Alegreya-Italic-VariableFont_wght.ttf');
+}
 
 
 /*----title style----*/
@@ -502,6 +532,10 @@ img.hover-shadow{
   box-shadow: 0px -1px 16px 5px rgba(0, 0, 0, 0.467);
   color: rgb(30, 30, 30);
   z-index: 0;
+}
+
+.contbox b{
+  font-weight: 700;
 }
 
 .contbox h1{
