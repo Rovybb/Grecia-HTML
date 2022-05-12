@@ -58,7 +58,7 @@ html {
 
 /*----title style----*/
 
-h2{
+h2.title{
   cursor: default;
   user-select: none;
   position: relative;
@@ -504,10 +504,19 @@ img.hover-shadow{
   z-index: 0;
 }
 
+.contbox h1{
+  margin: 40px 0;
+}
+
 .contbox p {
 
   text-align: justify;
   font-size: 20px;
+}
+
+.contbox li{
+  font-size: 19px;
+  text-align: justify;
 }
 
 .contbox img{
