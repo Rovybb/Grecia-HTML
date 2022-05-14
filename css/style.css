@@ -548,9 +548,26 @@ img.hover-shadow{
   font-size: 20px;
 }
 
-.contbox li{
+.contbox ul li{
   font-size: 19px;
   text-align: justify;
+}
+
+.contbox ol{
+  list-style: none;
+  counter-reset: custom-counter;
+}
+
+.contbox ol li{
+  counter-increment: custom-counter;
+  font-size: 25px;
+}
+
+.contbox ol li::before{
+  content: counter(custom-counter) ". ";
+  font-size: 28px;
+  font-style: bold;
+  color: #0a3d62;
 }
 
 .contbox img{
