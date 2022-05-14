@@ -1,0 +1,646 @@
+html { 
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(60, 99, 130, 1.0); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(10, 61, 98, 1.0); 
+}
+
+::-webkit-scrollbar-thumb:active{
+  background: rgb(9, 55, 87);
+}
+
+/* roboto-regular - latin-ext_latin  !AM SCHIMBAT FONTUL*/
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v29-latin-ext_latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/roboto-v29-latin-ext_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v29-latin-ext_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v29-latin-ext_latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v29-latin-ext_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v29-latin-ext_latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Roboto Italic'), local('Roboto-Italic'), url(https://fonts.gstatic.com/s/roboto/v15/vSzulfKSK0LLjjfeaxcREhTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+}
+
+/*----title font----*/
+
+@font-face {
+  font-family: 'Greek';
+  src: local(''),
+        url('../fonts/SATYP___.TTF') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&display=swap');
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+        url('../fonts/Alegreya-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: 'Alegreya';
+  font-style: italic;
+  font-weight: 400;
+  src: local(''),
+        url('../fonts/Alegreya-Italic-VariableFont_wght.ttf');
+}
+
+
+/*----title style----*/
+
+h2.title{
+  cursor: default;
+  user-select: none;
+  position: relative;
+  margin-top: 175px;
+  margin-bottom: 225px;
+  font-family: "Greek";
+  color: white;
+  text-shadow: 0px 0px 6px black;
+  font-size: 300px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+h3{
+  cursor: default;
+  user-select: none;
+  position: relative;
+  left: -125.25px;
+  margin-top: 50px;
+  margin-bottom: 0;
+  font-family: "Greek";
+  text-shadow: 0px 0px 6px black;
+  color: white;
+  font-size: 100px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+/*----background image----*/
+
+body{
+    position: absolute;
+    top: 0px;
+    bottom: auto;
+    right: 0px;
+    left: 0px;
+    min-height: 100%;
+    background-size: cover;
+    background-image: url("../imagini/greciabb.jpg");
+    background-repeat: no-repeat;
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    overflow: overlay;
+}
+
+/*----gradient----*/
+
+#grad
+{
+  background-image: linear-gradient(to left, rgba(255,255,255,0) 0%, rgba(96, 163, 188,0.6) 100%);
+  background-size: cover;
+  left: 0px;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  z-index: -1;
+}
+
+/*----top page menu----*/
+
+.nav
+{
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #3c6382;
+  text-align:center;
+  box-shadow:0px 0px 60px 2px rgba(0,0,0, 1);
+  user-select: none;
+}
+
+.nav li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li a {
+  cursor: pointer;
+  user-select: none;
+  font-size: 100%;
+  display: block;
+  color: white;
+  text-shadow: 0px 0px 6px black;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+/*----dropdown part of top page menu----*/
+
+.dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none; 
+}
+
+.nav li a:hover, .dropdown:hover .dropbtn {
+  background-color: #0a3d62;
+}
+
+a.active:hover {
+  cursor: default;
+}
+
+.dropbtn{
+  cursor: default !important;
+}
+
+.dropdown
+{
+  z-index: 5;
+}
+
+.dropdown li {
+  display: inline-block;
+}
+
+.dropdown-content  {
+  display: none;
+  position: absolute;
+  background-color: #3c6382;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 5;
+}
+
+.dropdown-content a {
+  cursor: pointer;
+  user-select: none;
+  color: black;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.dropdown-content a:hover 
+{
+	background-color: #0a3d62;
+}
+	
+.dropdown:hover .dropdown-content 
+{
+  display: block;
+}
+/*----image slider----*/
+
+.slider {
+  position: relative;
+  width: 750px;
+  height: 450px;
+  background-color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 125px;
+  margin-bottom: 125px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1)
+}
+
+#image-container {
+  width: 4500px;
+  background-color: whitesmoke;
+  height: 450px;
+  clear: both;
+  position: relative;
+  -webkit-transition: left 2s;
+  -moz-transition: left 2s;
+  -o-transition: left 2s;
+  transition: left 2s;
+
+  box-shadow: 0px, 0px, 8px, 5px, rgba(0, 0, 0, 0.5);
+}
+
+.slide {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+.buttons {
+  cursor: default;
+  user-select: none;
+  position: relative;
+  top: -20px;
+}
+
+.buttons a {
+  cursor: pointer;
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border-radius: 50px;
+  background-color: rgba(245, 245, 245, 0.726);
+}
+
+.prev {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: auto;
+  padding: 16px;
+  margin-top: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s ease;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: 0px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: 0.3s ease;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*----foto gallery----*/
+
+.gallery {
+  display: grid;
+  cursor: default;
+  user-select: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(10, 10vw);
+  grid-gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__item {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 6;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  position: relative;
+  background-color: rgba(0 ,0 ,0, 0);
+  margin: auto;
+  padding: 0;
+  width: auto;
+  max-width: 1200px;
+  max-height: 500px;
+  user-select: none;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+  user-select: none;
+}
+
+/* Next & previous buttons */
+.prevg,
+.nextg {
+  cursor: pointer;
+  position: absolute;
+  top: 250px;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.nextg {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prevg:hover,
+.nextg:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 15px;
+  position: absolute;
+  top: 0;
+  user-select: none;
+}
+
+.mySlides img{
+  margin-bottom: -5px;
+  max-height: 500px;
+  object-fit: scale-down;
+}
+
+img.hover-shadow{
+  transition: 0.3s;
+}
+
+.hover-shadow:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*----side page menu----*/
+
+.side_bar_menu
+{
+  position: sticky;
+  margin-left: 25px;
+  margin-top: 201.5px;
+  padding: 0px;
+  top: 0;
+  z-index: 5;
+  float: left;
+}
+
+.side_bar_menu ul 
+{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  background-color: white;
+  min-width: 225.55px;
+  box-shadow: -8px 0px 8px 0px rgb(0 0 0 / 20%);
+}
+
+.side_bar_menu li a {
+  color: black;
+  padding: 15px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.side_bar_menu li a.active
+{
+  background-color: #0a3d62;
+  color: white;
+  pointer-events: none;
+}
+
+.side_bar_menu li a:hover:not(.active) 
+{
+	background-color: #d2cdcd;
+}
+
+/*----content style----*/
+
+.contbox
+{
+  position: relative;
+  min-width: 500px;
+  min-height: 303px;
+  margin-left: 250px;
+  margin-right: 250px;
+  margin-top: 50px;
+  margin-bottom: 82px;
+  background-color: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  box-shadow: 0px -1px 16px 5px rgba(0, 0, 0, 0.467);
+  color: rgb(30, 30, 30);
+  z-index: 0;
+}
+
+.contbox b{
+  font-weight: 700;
+}
+
+.contbox h1{
+  margin: 40px 0;
+}
+
+.contbox p {
+
+  text-align: justify;
+  font-size: 20px;
+}
+
+.contbox ul li{
+  font-size: 19px;
+  text-align: justify;
+}
+
+.contbox ol{
+  list-style: none;
+  counter-reset: custom-counter;
+}
+
+.contbox ol li{
+  counter-increment: custom-counter;
+  font-size: 25px;
+}
+
+.contbox ol li::before{
+  content: counter(custom-counter) ". ";
+  font-size: 28px;
+  font-style: bold;
+  color: #0a3d62;
+}
+
+.contbox img{
+  margin: 10px 20px;
+}
+
+.contbox p.quote{
+  font-family: "Alegreya", serif;
+  font-style: normal;
+}
+
+.contbox p span
+{
+  display: inline-block;
+  margin-left: 40px;
+}
+
+.contbox p.quote span
+{
+  display: inline-block;
+  margin-left: 40px;
+}
+
+/*----footer----*/
+
+footer 
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 82px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(0, 29, 33, 0.97);
+  color: white;
+  text-align: center;
+  z-index: 5;
+}
+
+footer p
+{
+	font-size: 15px;
+}
+
+footer p span
+{
+  display: inline-block;
+  margin-left: 15px;
+}
+
+footer a
+{
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover
+{
+  text-decoration: underline;
+  color: #b8e994;
+}
+
+footer a:visited
+{
+  text-decoration: inherit;
+  color: #fad390;
+}
+
+footer a:active
+{
+  text-decoration: underline;
+  color: #78e08f;
+}
