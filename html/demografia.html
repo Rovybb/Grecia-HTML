@@ -77,7 +77,8 @@
 					</p>
 					<h2>Orașele</h2>
 					<p>
-						Aproape două treimi din greci trăiesc în zone urbane. Cele mai mari și mai influente centre metropolitane 
+						<img src="../imagini/turism/peninsula_balcanica/Salonic (Thessaloniki)/salonic (3).jpg" style="float: left; object-fit: scale-down; margin-left: 0; cursor: pointer;" width="40%" title="Localizare faţă de Europa" onclick="openModal();currentSlide(1)"
+						>Aproape două treimi din greci trăiesc în zone urbane. Cele mai mari și mai influente centre metropolitane 
 						ale Greciei sunt <b>Atena</b> și <b>Salonic</b>, cu populații metropolitane de circa 4 milioane și respectiv un milion 
 						de locuitori. Alte orașe cu populație urbană de peste 100.000 de locuitori sunt <b>Patras</b>, <b>Heraklion</b>, <b>Larissa</b>, 
 						<b>Volos</b>, <b>Rhodos</b>, <b>Ioannina</b>, <b>Chania</b> și <b>Chalcis</b>.
@@ -217,6 +218,40 @@
 						<b>Bulgaria (5%)</b> și <b>România (3%)</b>, în timp ce imigranții din statele fostei <b>URSS</b> (<b>Georgia</b>, <b>Rusia</b>, <b>Ucraina</b>, <b>Moldova</b>, etc.) 
 						compuneau 10% din total.
 					</p>
+					<h2>Religia</h2>
+					<p>
+						<img src="../imagini/turism/peninsula_balcanica/manastirile de pe meteora/meteora1.jpg" style="float: right; object-fit: scale-down; margin-right: 0; cursor: pointer;" width="40%" title="Localizare faţă de Europa" onclick="openModal();currentSlide(2)"
+						>Constituția Greciei recunoaște <b>creștinismul ortodox</b> drept religie „predominantă” în țară, garantând însă libertatea 
+						religioasă pentru toată lumea. Guvernul grec nu ține statistici privind grupurile religioase și la recensăminte nu se 
+						înregistrează afilierea religioasă. Conform Departamentului de Stat american, circa 97% din cetățenii greci se 
+						identifică drept creștini ortodocși.
+					</p>
+					<p>
+						Într-un sondaj <b>Eurobarometru</b> efectuat în 2010 de <b>Eurostat</b>, 79% din cetățenii greci au răspuns că „cred că 
+						există un Dumnezeu”. Conform altor surse, 15,8% din greci se autodescriu drept „foarte religioși”, cel mai ridicat 
+						procent din toate țările europene. Acest sondaj a găsit și că doar 3,5% nu au mers niciodată la biserică, față de 
+						4,9% în Polonia și 59,1% în Cehia.
+					</p>
+				</div>
+
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				  
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../imagini/turism/peninsula_balcanica/Salonic (Thessaloniki)/salonic (3).jpg" style="width:100%">
+						  </div>
+
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../imagini/turism/peninsula_balcanica/manastirile de pe meteora/meteora1.jpg" style="width:100%">
+						</div>
+					  
+					  <a class="prevg" onclick="plusSlides(-1)">&#10094;</a>
+					  <a class="nextg" onclick="plusSlides(1)">&#10095;</a>
+				  
+					</div>
 				</div>
 
 				<footer>
@@ -242,6 +277,41 @@
   };
 
 })();
+			</script>
+			<script>
+				function openModal() {
+            document.getElementById("myModal").style.display = "block";
+			document.body.style.overflow = "hidden";
+          }
+          
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+			document.body.style.overflow = "overlay"
+          }
+          
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var texts = document.getElementsByClassName("numbertext");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+            texts[slideIndex-1].textContent = slideIndex + " / " + slides.length;
+          }
 			</script>
 </html>
 		
