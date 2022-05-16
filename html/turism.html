@@ -45,10 +45,26 @@
 				<h3 style="left: 0;">GRECIA</h3>
 
 				<div class="contbox">
-					<h1 style="text-align: center; margin-top: 0;"></h1>
-					<p>
-						
-					</p>
+					<h1 style="text-align: center; margin-top: 0;">Atracții turistice</h1>
+					<img src="../imagini/maps/harta_turism1.png" style="display: block; margin: 0 auto;" usemap="#greciamap">
+
+					<map name="greciamap">
+						<area target="" alt="Atena" title="Atena" href="" coords="298,258,9" shape="circle" onclick="openDesc();currentSlide(1)">
+    					<area target="" alt="Corfu" title="Corfu" href="" coords="116,158,10" shape="circle">
+    					<area target="" alt="Creta" title="Creta" href="" coords="356,422,10" shape="circle">
+   						<area target="" alt="Rhodos" title="Rhodos" href="" coords="505,366,11" shape="circle">
+   						<area target="" alt="Zakynthos" title="Zakynthos" href="" coords="161,270,10" shape="circle">
+   						<area target="" alt="Nafplio" title="Nafplio" href="" coords="260,283,9" shape="circle">
+					</map>
+				</div>
+
+				<div id="description" style="display: none">
+					<div class="contbox myDesc">
+						<h1 style="text-align: center; margin-top: 0;">Atena</h1>
+						<p>
+
+						</p>
+					</div>
 				</div>
 
 				<footer>
@@ -74,6 +90,27 @@
   };
 
 })();
+			</script>
+			<script>
+				function openDesc() {
+            document.getElementById("description").style.display = "block";
+          }
+          
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("myDesc");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+          }
 			</script>
 </html>
 		

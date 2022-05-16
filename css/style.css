@@ -571,6 +571,7 @@ img.hover-shadow {
 
 .contbox img {
   margin: 10px 20px;
+  user-select: none;
 }
 
 .contbox p.quote {
@@ -660,7 +661,8 @@ footer a:active {
   font-weight: 700;
 }
 
-.contbox a:hover, .contbox a:visited:hover {
+.contbox a:hover,
+.contbox a:visited:hover {
   color: #b8e994;
 }
 
@@ -672,4 +674,8 @@ footer a:active {
 .contbox a:active {
   text-decoration: underline;
   color: #78e08f;
+}
+
+.myDesc {
+  display: none;
 }
