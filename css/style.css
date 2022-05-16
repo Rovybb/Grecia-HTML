@@ -572,6 +572,7 @@ img.hover-shadow {
 .contbox img {
   margin: 10px 20px;
   user-select: none;
+  display: block;
 }
 
 .contbox p.quote {
