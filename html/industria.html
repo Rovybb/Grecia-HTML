@@ -52,10 +52,47 @@
 				<h3>GRECIA</h3>
 
 				<div class="contbox">
-					<h1 style="text-align: center; margin-top: 0;"></h1>
+					<h1 style="text-align: center; margin-top: 0;">Industria</h1>
 					<p>
-						
+						<b>Industria navigației</b> este un element-cheie al activităților economice din <b>Grecia</b> începând cu vremurile antice. 
+						Astăzi, navigația este una dintre cele mai importante industrii ale țării. Ea reprezintă <b>4,5% din PIB</b>, 
+						și are circ 160.000 de angajați (4% din forța de muncă), și reprezintă 1/3 din deficitul comercial al țării.
 					</p>
+					<p>
+						<img src="../imagini/vapor.png" style="float: right; object-fit: scale-down; margin-right: 0; cursor: pointer;" width="40%" title="Vapor din Flota Greciei" onclick="openModal();currentSlide(1)"
+						>În anii 1960, dimensiunea flotei grecești s-a dublat, în principal prin investiții derulate de magnații 
+						<b>Aristotel Onassis</b> și <b>Stavros Niarchos</b>. Baza industriei maritime grecești moderne s-a format după al <b>Doilea Război Mondial</b> 
+						când armatorii greci au putut acumula vase vândute ieftin de guvernul american prin <b>Legea Vânzărilor de Vase</b> din anii 1940.<br><br>
+					</p>
+					<p>
+						Conform unui raport din 2011 al <b>Conferinței Națiunilor Unite pentru Comerț și Dezvoltare</b>, marina comercială 
+						greacă este <b>cea mai mare din lume</b>, reprezentând <b>16,2% din capacitatea mondială de transport</b>, în creștere 
+						de la 15,96% în 2010. Numărul echivalent în 2006 era și mai mare, de 18,2%. Tonajul total al flotei comerciale 
+						naționale este de 202 milioane tone capacitate de încărcare, cel mai ridicat din lume.
+					</p>
+					<p>
+						În termeni de număr total de vase, <b>Marina Comercială Greacă</b> este pe <b>locul al patrulea în lume</b>, 
+						cu <b>3.150 de nave</b> (dintre care 741 sunt înmatriculate în Grecia, iar restul de 2.409 în porturi străine). 
+						După categoriile de vase, Grecia este pe <b>primul loc la petroliere și vrachiere</b>, pe <b>locul patru 
+						la numărul de port-containere</b>, și pe <b>al cincilea la alte vase</b>. Flota actuală este însă mai mică decât 
+						dimensiunea-record de 5.000 de vase, înregistrată la sfârșitul anilor 1970. Numărul total de vase sub 
+						pavilion grec (ceea ce cuprinde flotele străine) este de 1.517, sau <b>5,3% din capacitatea de încărcare mondială (locul 5)</b>.
+					</p>
+				</div>
+
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../imagini/vapor.png" style="width:100%">
+						</div>
+					
+						<a class="prevg" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="nextg" onclick="plusSlides(1)">&#10095;</a>
+						
+					</div>
 				</div>
 
 				<footer>
@@ -81,6 +118,41 @@
   };
 
 })();
+			</script>
+			<script>
+				function openModal() {
+            document.getElementById("myModal").style.display = "block";
+			document.body.style.overflow = "hidden";
+          }
+          
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+			document.body.style.overflow = "overlay"
+          }
+          
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var texts = document.getElementsByClassName("numbertext");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+            texts[slideIndex-1].textContent = slideIndex + " / " + slides.length;
+          }
 			</script>
 </html>
 		

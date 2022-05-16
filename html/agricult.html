@@ -52,10 +52,36 @@
 				<h3>GRECIA</h3>
 
 				<div class="contbox">
-					<h1 style="text-align: center; margin-top: 0;"></h1>
+					<h1 style="text-align: center; margin-top: 0;">Agricultura</h1>
 					<p>
-						
+						În 2010, <b>Grecia</b> a fost <b>cel mai mare producător de bumbac</b> din <b>Uniunea Europeană</b> (183.800 tone) și de 
+						<img src="../imagini/stafide.jpg" style="float: left; object-fit: scale-down; margin-left: 0; cursor: pointer;" width="50%" title="Stafide uscate în Zakynthos" onclick="openModal();currentSlide(1)"
+						><b>fistic</b> (8.000 tone) și s-a clasat pe <b>locul al doilea la producția de orez</b> (229.500 tons) și de <b>măsline</b> 
+						(147.500 tone), pe <b>locul trei la producția de curmale</b> (11.000 tone) și <b>migdale</b> (44.000 tone), <b>tomate</b> (1.400.000 tone)  
+						și <b>pepeni</b> (578.400 tone) și pe <b>locul al patrulea la producția de tutun</b> (22.000 tone). 
+						Agricultura contribuie cu <b>3,8% la PIB-ul</b> țării și angajează 12,4% din forța de muncă la nivel național.<br><br>
 					</p>
+					<p>
+						<b>Grecia</b> este un beneficiar major al <b>Politicii Agricole Comune</b> a <b>Uniunii Europene</b>. Ca urmare a aderării țării 
+						la <b>Comunitatea Europeană</b>, mare parte din infrastructura sa agricolă a fost modernizată cu fonduri europene și 
+						producția agricolă a crescut. Între 2000 și 2007, fermele ecologice din <b>Grecia</b> au înregistrat o creștere de <b>885%</b>, 
+						cel mai mare procentaj din UE.
+					</p>
+				</div>
+
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../imagini/stafide.jpg" style="width:100%">
+						</div>
+					
+						<a class="prevg" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="nextg" onclick="plusSlides(1)">&#10095;</a>
+						
+					</div>
 				</div>
 
 				<footer>
@@ -81,6 +107,41 @@
   };
 
 })();
+			</script>
+			<script>
+				function openModal() {
+            document.getElementById("myModal").style.display = "block";
+			document.body.style.overflow = "hidden";
+          }
+          
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+			document.body.style.overflow = "overlay"
+          }
+          
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var texts = document.getElementsByClassName("numbertext");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+            texts[slideIndex-1].textContent = slideIndex + " / " + slides.length;
+          }
 			</script>
 </html>
 		

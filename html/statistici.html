@@ -52,10 +52,38 @@
 				<h3>GRECIA</h3>
 
 				<div class="contbox">
-					<h1 style="text-align: center; margin-top: 0;"></h1>
+					<h1 style="text-align: center; margin-top: 0;">Economia Greciei</h1>
 					<p>
-						
+						<img src="../imagini/maps/harta_pib.png" style="float: right; object-fit: scale-down; margin-right: 0; cursor: pointer;" width="40%" title="PIB pe cap de locuitor" onclick="openModal();currentSlide(1)"
+						><b>Economia Greciei</b> este a 34-a (în termeni nominali) și a 42-a (în termenii parității puterii de cumpărare) din lume, 
+						cu 299 sau 304 miliarde de dolari PIB, conform statisticilor <b>Băncii Mondiale</b> pe anul 2011. <b>Grecia</b> este, în plus, 
+						a 15-a economie între cele 28 de state membre ale <b>Uniunii Europene</b>. În termeni de venit pe cap de locuitor, <b>Grecia</b> se 
+						clasează pe locul al 29-lea sau al 33-lea (în funcție de PIB nominal, respectiv în termenii PPC) din lume la 27.875 de 
+						dolari, respectiv 27.624 de dolari.
 					</p>
+					<p>
+						<b>Grecia</b> este o țară dezvoltată cu standarde de viață ridicate. Economia sa cuprinde sectorul <b>servicii</b> (85%) și 
+						<b>industria</b> (12%), în timp ce <b>agricultura</b> formează 3% din produsul național brut. Printre cele mai importante 
+						sectoare economice se numără <b>turismul</b> (cu 14,9 milioane de turiști internaționali în 2009, este <b>a șaptea cea 
+						mai vizitată țară a Uniunii Europene</b> și <b>a 16-a din lume de către Organizația Mondială a Turismului</b>); și navigația 
+						comercială (cu 16,2% din capacitatea mondială totală, <b>marina comercială greacă fiind cea mai mare din lume</b>), 
+						în timp ce țara este și <b>un considerabil producător agricol</b> (incluzând culturile de pește) în cadrul uniunii.
+					</p>
+				</div>
+
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+				
+						<div class="mySlides">
+							<div class="numbertext"></div>
+							<img src="../imagini/maps/harta_pib.png" style="width:100%">
+						</div>
+					
+						<a class="prevg" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="nextg" onclick="plusSlides(1)">&#10095;</a>
+						
+					</div>
 				</div>
 
 				<footer>
@@ -81,6 +109,41 @@
   };
 
 })();
+			</script>
+			<script>
+				function openModal() {
+            document.getElementById("myModal").style.display = "block";
+			document.body.style.overflow = "hidden";
+          }
+          
+          function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+			document.body.style.overflow = "overlay"
+          }
+          
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+          
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+          
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var texts = document.getElementsByClassName("numbertext");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+            texts[slideIndex-1].textContent = slideIndex + " / " + slides.length;
+          }
 			</script>
 </html>
 		
