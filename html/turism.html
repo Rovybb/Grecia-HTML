@@ -46,25 +46,116 @@
 
 				<div class="contbox">
 					<h1 style="text-align: center; margin-top: 0;">Atracții turistice</h1>
-					<img src="../imagini/maps/harta_turism1.png" style="display: block; margin: 0 auto;" usemap="#greciamap">
+					<img src="../imagini/maps/harta_turism.png" name="harta" style="display: block; margin: 0 auto;" usemap="#greciamap">
 
 					<map name="greciamap">
-						<area target="" alt="Atena" title="Atena" href="" coords="298,258,9" shape="circle" onclick="openDesc();currentSlide(1)">
-    					<area target="" alt="Corfu" title="Corfu" href="" coords="116,158,10" shape="circle">
-    					<area target="" alt="Creta" title="Creta" href="" coords="356,422,10" shape="circle">
-   						<area target="" alt="Rhodos" title="Rhodos" href="" coords="505,366,11" shape="circle">
-   						<area target="" alt="Zakynthos" title="Zakynthos" href="" coords="161,270,10" shape="circle">
-   						<area target="" alt="Nafplio" title="Nafplio" href="" coords="260,283,9" shape="circle">
+						<area target="" alt="Atena" title="Atena" href="" coords="298,258,9" shape="circle" onmouseout="harta.src='../imagini/maps/harta_turism.png'" onmouseover="harta.src='../imagini/maps/harta_turism_atena.png'" onclick="openDesc();currentDesc(1);return false;">
+    					<area target="" alt="Corfu" title="Corfu" href="" coords="116,158,10" shape="circle" onmouseout="harta.src='../imagini/maps/harta_turism.png'" onmouseover="harta.src='../imagini/maps/harta_turism_corfu.png'" onclick="openDesc();currentDesc(2);return false;">
+    					<area target="" alt="Creta" title="Creta" href="" coords="356,422,10" shape="circle" onmouseout="harta.src='../imagini/maps/harta_turism.png'" onmouseover="harta.src='../imagini/maps/harta_turism_creta.png'" onclick="openDesc();currentDesc(3);return false;">
+   						<area target="" alt="Rhodos" title="Rhodos" href="" coords="505,366,11" shape="circle" onmouseout="harta.src='../imagini/maps/harta_turism.png'" onmouseover="harta.src='../imagini/maps/harta_turism_rhodos.png'" onclick="openDesc();currentDesc(4);return false;">
+   						<area target="" alt="Zakynthos" title="Zakynthos" href="" coords="161,270,10" shape="circle" onmouseout="harta.src='../imagini/maps/harta_turism.png'" onmouseover="harta.src='../imagini/maps/harta_turism_zakynthos.png'" onclick="openDesc();currentDesc(5);return false;">
+   						<area target="" alt="Nafplio" title="Nafplio" href="" coords="260,283,9" shape="circle" onmouseout="harta.src='../imagini/maps/harta_turism.png'" onmouseover="harta.src='../imagini/maps/harta_turism_nafplio.png'" onclick="openDesc();currentDesc(6);return false;">
 					</map>
 				</div>
 
 				<div id="description" style="display: none">
+
 					<div class="contbox myDesc">
 						<h1 style="text-align: center; margin-top: 0;">Atena</h1>
 						<p>
-
+							<img src="../imagini/vedere-panoramica-atena.jpg" style="float: right; object-fit: scale-down; margin-right: 0" width="50%" title="Atena"
+							><b>Atena</b> este capitala <b>Greciei</b>. <b>Atena</b> a cunoscut o evoluție glorioasă, mai ales în <b>Grecia Antică</b>, 
+							fiind locuită de oameni încă din <b>Epoca Bronzului</b> și guvernată până în jurul anului 1000 î.Hr. de regi ionieni.
 						</p>
+						<p>
+							<b>Atena</b> domină regiunea <b>Attica</b> și este unul dintre cele mai vechi orașe din lume, istoria sa atestată durând peste 
+							3,400 de ani iar cea mai timpurie prezență umană a fost între mileniile 11 și 7 î.e.n.
+						</p>
+						<p>
+							<b>Atena clasică</b> a fost un puternic oraș-stat a cărui apariție a avut legătură cu dezvoltarea portului maritim <b>Pireu</b>. 
+							Centrul al artelor, studiului și filozofiei, casa <b>Academiei lui Platon</b> și a <b>Liceului lui Aristotel</b>, este numită adesea 
+							leagănul civilizației occidentale și loc de naștere al democrației, în mare parte din cauza impactului său cultural și 
+							politic asupra continentului european și, de asemenea, asupra romanilor. În timpurile contemporane, <b>Atena</b> este o mare 
+							metropolă cosmopolită și centru al vieții economice, financiare, industriale, maritime, politice și culturale din <b>Grecia</b>.
+						</p>
+
 					</div>
+
+					<div class="contbox myDesc">
+						<h1 style="text-align: center; margin-top: 0;">Corfu</h1>
+						<p>
+							<b>Corfu</b> este o insulă a <b>Greciei</b>, în <b>Marea Ionică</b>, aproape de coasta albaneză, de care este despărțită printr-o o 
+							strâmtoare cu o lățime de 3 până la 25 de km. Este de asemenea o Prefectură ce mai conține o serie de insule mici 
+							din apropiere printre care cele mai importante sunt insulele <b>Paxoi</b> și <b>Othonoi</b>.
+						</p>
+						<img src="../imagini/turism/insule/insula Corfu/corfu (1).jpg" style="display: block; margin: 0 auto;" width="100%" title="Insula Corfu">
+					</div>
+
+					<div class="contbox myDesc">
+						<h1 style="text-align: center; margin-top: 0;">Creta</h1>
+						<p>
+							<b>Creta</b> este cea mai sudică insulă greacă la <b>Marea Egee</b>, constituind una din provinciile <b>Greciei</b>. 
+							La rândul ei, provincia <b>Creta</b> cuprinde următoarele 4 prefecturi: <b>Chania</b>, <b>Heraklion</b>, <b>Lasithi</b> și <b>Rethimno</b>.
+						</p>
+						<p>
+							În anul 67 î.Hr., <b>Creta</b> figurează în cronicile istorice ca o insulă aparținând <b>Imperiului Roman</b>. 
+							După căderea imperiului, <b>Creta</b> a intrat sub dominația <b>Bizanțului</b>. Între anii 1211-1669 s-a aflat 
+							sub controlul <b>Republicii Veneția</b> și a devenit un bastion de apărare a intereselor acesteia în est. 
+							În perioada 1669-1898 locuitorii greci ai <b>Cretei</b> au luptat împotriva dominației <b>Imperiului Otoman</b>. 
+							În 1913, <b>Creta</b> a devenit parte din <b>Grecia</b>.
+						</p>
+						<img src="../imagini/insula-creta-grecia.jpg" style="display: block; margin: 0 auto;" width="100%" title="Insula Creta">
+					</div>
+
+					<div class="contbox myDesc">
+						<h1 style="text-align: center; margin-top: 0;">Rhodos</h1>
+						<p>
+							<b>Rodos</b> (sau <b>Rhodos</b>) este cea mai mare și cea mai estică insulă dintre insulele grupului <b>Dodecaneze</b> în <b>Marea Egee</b>. 
+							Această insulă, a patra ca mărime din <b>Grecia</b>, este situată mult mai aproape de țărmul turcesc decât de cel 
+							al patriei mamă.
+						</p>
+						<p>
+							Capitala, denumită tot <b>Rodos</b>, este situată în nordul insulei și este compusă practic 
+							din trei orașe: <b>modern</b>, <b>antic</b> și <b>medieval</b>. Orașul modern are un caracter cosmopolit, cu majoritatea clădirilor ridicate 
+							în secolul al XX-lea. Orașul antic, fondat în anul 408 î.Chr. se mândrește cu ruinele templelor lui <b>Zeus</b>, <b>Atena</b> și <b>Apollo</b>, 
+							cu <b>Stadionul</b>, <b>Gymnasiumul</b> și <b>Teatrul</b>. Orașul medieval este înconjurat de zidurile ridicate de <b>Cruciați</b>. Este împărțit în 
+							două părți inegale: micul <b>Collachio</b> și marele <b>Burgo</b> sau <b>Hora</b>.
+						</p>
+						<img src="../imagini/turism/insule/insula rhodos/rhodos (1).jpg" style="display: block; margin: 0 auto;" width="100%" title="Insula Rhodos">
+					</div>
+
+					<div class="contbox myDesc">
+						<h1 style="text-align: center; margin-top: 0;">Zakynthos</h1>
+						<p>
+							<b>Zakynthos</b> (în greacă <b><i>Ζάκυνθος</i></b>) este o prefectură greacă, și de asemenea o insulă aflată în <b>Marea Ionică</b>.
+						</p>
+						<p>
+							Primele semne de viață datează din <b>neolitic</b>, urmele fiind găsite in golful <b>Laganas</b>. După <b>Homer</b>, colonizarea 
+							a avut loc prin anii 1600 - 1500 î.Hr. de coloniștii din <b>Psofida</b> (<b>Arcadia</b>). În anii următori insula a fost 
+							cucerită de <b>Arkisios</b>, regele <b>Cefaloniei</b>. Mai târziu a ajuns în posesia lui <b>Ulisse</b>, fiul lui <b>Laertes</b>, regele 
+							<b>Itacăi</b>. În timpul războaielor persane, <b>Zakynthos</b> a fost când neutră, când aliata lacedemonienilor, iar mai 
+							târziu a făcut parte din <b>Liga Ateniană</b>. În timpul campaniei lui <b>Filip</b> în <b>Grecia</b>, <b>Zakynthos</b> a căzut în mâinile 
+							macedonienilor, iar mai târziu ale romanilor, care în anul 146 î.Hr. au încorporat-o în districtul 
+							roman <b>Ahaia</b>, împreună cu <b>Epirul</b>, <b>Peloponezul</b> și insulele din <b>Marea Egee</b>, cu excepția <b>Cretei</b>. Odată cu declinul 
+							<b>Imperiului Roman</b> și ascensiunea <b>Imperiului Bizantin</b>, <b>Zakynthos</b> a fost inițial încadrată în provincia <b>Iliria</b>, 
+							iar mai târziu a devenit o parte a <b>Longobardiei</b>, cu <b>Ravenna</b> (<b>Italia</b>) drept capitală.
+						</p>
+						<img src="../imagini/turism/insule/insula zakynthos/zakynthos (3).jpg" style="display: block; margin: 0 auto;" width="100%" title="Insula Zakynthos">
+					</div>
+
+					<div class="contbox myDesc">
+						<h1 style="text-align: center; margin-top: 0;">Nafplio</h1>
+						<p>
+							<b>Nafplio</b> (greacă: <b><i>Ναύπλιο</i></b>) este un oraș de coastă situat în <b>Peloponez</b> în <b>Grecia</b>, care este capitala 
+							unității regionale <b>Argolis</b> și o destinație turistică importantă. Fondat în antichitate, orașul a 
+							devenit un port maritim important în <b>Evul Mediu</b> în timpul <b>Frankokratiei</b>, ca parte a domniei <b>Argos</b> 
+							și <b>Naupliei</b>, deținute inițial de <b><i>de la Roche</i></b>, în urma <b>Cruciadei a IV-a</b>, înainte de a trece sub 
+							<b>Republica Veneția</b> și, în sfârșit, <b>Imperiul Otoman</b>. Orașul a fost a doua capitală a <b>Primei Republici Elene</b> 
+							și a <b>Regatului Greciei</b>, din 1827 până în 1834.
+						</p>
+						<img src="../imagini/turism/pelopones/orasul naftilion/nafplio (1).jpg" style="display: block; margin: 0 auto;" width="100%" title="Orașul Nafplio">
+					</div>
+
 				</div>
 
 				<footer>
@@ -97,13 +188,13 @@
           }
           
           var slideIndex = 1;
-          showSlides(slideIndex);
+          showDesc(slideIndex);
           
-          function currentSlide(n) {
-            showSlides(slideIndex = n);
+          function currentDesc(n) {
+            showDesc(slideIndex = n);
           }
           
-          function showSlides(n) {
+          function showDesc(n) {
             var i;
             var slides = document.getElementsByClassName("myDesc");
             for (i = 0; i < slides.length; i++) {
